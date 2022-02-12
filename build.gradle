@@ -106,10 +106,10 @@ sourceSets.main.resources {
 dependencies {
     minecraft "net.minecraftforge:forge:${mc_version}-${forge_version}"
 
-    if (findProject(':mgui') != null) {
-        compile project(':mgui')
+    if (findProject(':mutil') != null) {
+        compile project(':mutil')
     } else {
-        compile fg.deobf("curse.maven:mgui:3456505")
+        compile fg.deobf("curse.maven:mutil:3456505")
     }
     runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}")
     compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}:api")
