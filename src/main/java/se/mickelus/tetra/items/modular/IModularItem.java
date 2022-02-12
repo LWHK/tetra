@@ -911,7 +911,7 @@ public interface IModularItem {
     }
 
     default String getDisplayNamePrefixes(ItemStack itemStack) {
-        Stream<String> abcdefg = Stream.concat(
+        return Stream.concat(
                 Arrays.stream(getImprovements(itemStack))
                         .map(improvement -> improvement.key + ".prefix")
                         .filter(I18n::hasKey)
@@ -921,8 +921,8 @@ public interface IModularItem {
                         .map(module -> module.getItemPrefix(itemStack))
                         .filter(Objects::nonNull)
         )
-                .limit(2);
-       return abcdefg.reduce("", (result, prefix) -> result + prefix + " ");
+                .limit(2)
+                .reduce("", (result, prefix) -> result + prefix + " ");
     }
 
     default String getItemName(ItemStack itemStack) {
