@@ -111,10 +111,10 @@ dependencies {
     } else {
         compile fg.deobf("curse.maven:mutil:3456505")
     }
-    runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}")
-    compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}:api")
+ //   runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}")
+ //   compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}:api")
 
-    compileOnly fg.deobf("vazkii.botania:Botania:${botania_version}:api")
+  //  compileOnly fg.deobf("vazkii.botania:Botania:${botania_version}:api")
 //    runtimeOnly fg.deobf("vazkii.botania:Botania:${botania_version}")
 //    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}")
 
